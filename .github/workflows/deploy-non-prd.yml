@@ -32,8 +32,8 @@ jobs:
       - name: get-credentials
         uses: google-github-actions/get-gke-credentials@main
         with:
-          cluster_name: k8s
-          location: asia-southeast1-a
+          cluster_name: demo
+          location: asia-southeast1-b
           credentials: ${{ secrets.GKE_CREDENTIALS }}
       - name: deploy
         uses: deliverybot/helm@v1
