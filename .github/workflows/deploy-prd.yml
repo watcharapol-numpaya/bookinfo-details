@@ -29,7 +29,7 @@ jobs:
           value-files: k8s/helm-values/values-bookinfo-prd-details.yaml
           values: |
             {
-              "ratings": {
+              "details": {
                 "tag": "${{ github.event.inputs.deploy-version }}"
               },
               "extraEnv": {
