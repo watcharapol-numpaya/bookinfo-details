@@ -4,8 +4,8 @@ metadata:
   name: {{ .Release.Name }}
   namespace: {{ .Values.details.namespace }}
 spec:
-  type: ClusterIP
+  type: {{ .Values.ingress.serviceType }}
   ports:
-  - port: 8080
+  - port: {{ .Values.details.port }}
   selector:
     app: {{ .Release.Name }}
